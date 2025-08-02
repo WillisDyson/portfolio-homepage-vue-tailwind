@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: sofia-pro-soft, Arial, sans-serif;
+}
+
 body {
   background-color: #272727;
   color: #ffffff;
