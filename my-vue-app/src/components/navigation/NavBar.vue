@@ -31,7 +31,7 @@ function setActive(href) {
 </script>
 
 <template>
-  <nav class="bg-custom-dark-gray">
+  <nav class="bg-custom-dark-grey">
     <ul
       class="mx-auto flex h-[67px] max-w-[1600px] items-center justify-evenly"
     >

@@ -4,11 +4,13 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        striped:
-          "repeating-linear-gradient(-45deg,_#333,_#333_200px,_#444_200px,_#444_400px)",
+        "custom-striped":
+          "repeating-linear-gradient(-45deg, #333, #333 200px, #444 200px, #444 400px)",
       },
       colors: {
-        "custom-dark-gray": "#1d1d1d",
+        "custom-very-dark-grey": "#191919",
+        "custom-dark-grey": "#1d1d1d",
+        "custom-bright-green": "#00CF6E",
       },
     },
   },

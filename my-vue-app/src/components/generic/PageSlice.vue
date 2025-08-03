@@ -5,5 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <section :class="['py-[100px]', `bg-${background}`]"></section>
+  <section :class="['py-[100px]', background]">
+    <slot />
+  </section>
 </template>
