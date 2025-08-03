@@ -18,7 +18,7 @@ const props = defineProps({
     role="combobox"
   >
     <div
-      class="flex items-center px-[22px] py-[7.5px] focus-within:bg-[#006b3b] hover:cursor-pointer hover:bg-[#006b3b] focus:bg-[#006b3b] focus-visible:bg-[#006b3b]"
+      class="flex items-center px-[22px] py-[6.5px] focus-within:bg-[#006b3b] hover:cursor-pointer hover:bg-[#006b3b] focus:bg-[#006b3b] focus-visible:bg-[#006b3b]"
     >
       <span>{{ text }}</span>
       <svg

@@ -4,6 +4,8 @@
 
 * {
   font-family: sofia-pro-soft, Arial, sans-serif;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 body {
