@@ -12,11 +12,11 @@ const props = defineProps({
 <template>
   <p class="inline-block text-[2.75rem] font-extralight leading-[3.68rem]">
     I'm a
-    <em class="text-custom-bright-green font-bold not-italic">{{
+    <em class="font-bold not-italic text-custom-bright-green">{{
       sublineData.roles[0]
     }}</em>
     and
-    <em class="text-custom-bright-green font-bold not-italic">{{
+    <em class="font-bold not-italic text-custom-bright-green">{{
       sublineData.roles[1]
     }}</em>
     based in

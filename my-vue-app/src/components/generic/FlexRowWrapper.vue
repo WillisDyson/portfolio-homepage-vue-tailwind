@@ -1,0 +1,7 @@
+<script setup></script>
+
+<template>
+  <div class="mx-auto flex max-w-[1300px] justify-center px-[15px]">
+    <slot />
+  </div>
+</template>
