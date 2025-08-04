@@ -10,6 +10,7 @@ import FlexRowWrapper from "./components/generic/FlexRowWrapper.vue";
 import FlexColWrapper from "./components/generic/FlexColWrapper.vue";
 import SkillCard from "./components/skills/SkillCard.vue";
 import Certification from "./components/certifications/Certification.vue";
+import CareerItem from "./components/career/CareerItem.vue";
 
 const navOptions = [
   { text: "About", href: "#about" },
@@ -154,6 +155,44 @@ const certificationData = [
     logoUrl: "images/google.png",
   },
 ];
+
+const careerData = [
+  {
+    logoUrl: "images/tcb.png",
+    alt: "TopCashback",
+    location: "Stafford, West Midlands, UK",
+    title: "Front End UI Developer & Web Accessibility Lead",
+    dates: "Current role since March 2025",
+  },
+  {
+    logoUrl: "images/tcb.png",
+    alt: "TopCashback",
+    location: "Stafford, West Midlands, UK",
+    title: "Front End UI Developer",
+    dates: "Feb 2022 - Mar 2025",
+  },
+  {
+    logoUrl: "images/ebuyer.png",
+    alt: "Ebuyer",
+    location: "Howden, East Yorkshire, UK",
+    title: "UI Designer/Developer",
+    dates: "May 2021 - Feb 2022",
+  },
+  {
+    logoUrl: "images/uoh.png",
+    alt: "University of Huddersfield",
+    location: "Huddersfield, West Yorkshire, UK",
+    title: "1st Class Information & Communication Technology (BSc) Graduate",
+    dates: "May 2021",
+  },
+  {
+    logoUrl: "images/tcb.png",
+    alt: "TopCashback",
+    location: "Stafford, West Midlands, UK",
+    title: "UX Designer (12 months internship)",
+    dates: "Jul 2019 – Sep 2020",
+  },
+];
 </script>
 
 <template>
@@ -189,5 +228,15 @@ const certificationData = [
     <FlexColWrapper>
       <Certification :certificationData="certificationData" />
     </FlexColWrapper>
+  </PageSlice>
+  <PageSlice>
+    <SliceHeader text="Career & Education" />
+    <FlexRowWrapper class="max-w-[940px] flex-wrap">
+      <CareerItem
+        v-for="(item, index) in careerData"
+        :key="index"
+        :careerData="item"
+      />
+    </FlexRowWrapper>
   </PageSlice>
 </template>

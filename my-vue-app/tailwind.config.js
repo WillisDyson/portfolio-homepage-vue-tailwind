@@ -11,8 +11,9 @@ export default {
         "custom-very-dark-grey": "#191919",
         "custom-dark-grey": "#1d1d1d",
         "custom-grey": "#2f2f2f",
-        "custom-bright-green": "#00CF6E",
+        "custom-mid-grey": "#949494",
         "custom-light-grey": "#b4b4b4",
+        "custom-bright-green": "#00CF6E",
       },
       animation: {
         "fade-in": "fadeIn 1.4s forwards",
