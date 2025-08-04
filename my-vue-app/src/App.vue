@@ -165,7 +165,7 @@ const certificationData = [
     <SeeMoreLink :href="seeMoreHref" />
   </PageSlice>
   <PageSlice background="bg-custom-striped">
-    <SliceHeader text="Skills" />
+    <SliceHeader text="Skills" id="skills" />
     <FlexRowWrapper>
       <SkillCard
         v-for="(card, idx) in skillCardData"

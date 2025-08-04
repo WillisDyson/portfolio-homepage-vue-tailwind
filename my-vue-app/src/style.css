@@ -5,6 +5,7 @@
 * {
   font-family: sofia-pro-soft, Arial, sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
