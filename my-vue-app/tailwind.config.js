@@ -10,6 +10,7 @@ export default {
       colors: {
         "custom-very-dark-grey": "#191919",
         "custom-dark-grey": "#1d1d1d",
+        "custom-grey": "#2f2f2f",
         "custom-bright-green": "#00CF6E",
         "custom-light-grey": "#b4b4b4",
       },

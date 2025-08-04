@@ -102,7 +102,7 @@ const certificationData = [
     title: "Introduction to Vue.js framework",
     issuer: "Codio",
     completed: "July 2025",
-    logoUrl: "images/codeo.jpg",
+    logoUrl: "images/codio.png",
   },
   {
     url: "https://www.coursera.org/account/accomplishments/verify/OBJXXKUK73GY",
