@@ -45,7 +45,7 @@ const props = defineProps({
         :key="option.href"
         class="decoration-none px-[22px] py-[12px] text-[#101010] focus-within:bg-[#f0f0f0] hover:bg-[#f0f0f0] focus:bg-[#f0f0f0] focus-visible:bg-[#f0f0f0]"
       >
-        <a :href="option.href">{{ option.text }}</a>
+        <a :href="option.href" download>{{ option.text }}</a>
       </li>
     </ul>
   </div>
