@@ -3,27 +3,18 @@ import { ref } from "vue";
 import NavLink from "./NavLink.vue";
 import DropdownMenu from "../generic/DropdownMenu.vue";
 
-const navOptions = [
-  { text: "About", href: "#about" },
-  { text: "Skills", href: "#skills" },
-  { text: "Certifications", href: "#certifs" },
-  { text: "Career & Education", href: "#career" },
-  { text: "Projects", href: "#work" },
-  { text: "Social Media & Contact", href: "#contact" },
-];
-
-const dropdownOptions = [
-  {
-    text: "Screen-friendly PDF",
-    href: "/assets/willis-dyson__cv-july-2025-interactive.pdf",
+const props = defineProps({
+  navOptions: {
+    type: Array,
+    default: () => [],
   },
-  {
-    text: "Print-friendly PDF",
-    href: "/assets/willis-dyson__cv-july-2025-print.pdf",
+  dropdownOptions: {
+    type: Array,
+    default: () => [],
   },
-];
+});
 
-const activeHref = ref(navOptions[0].href);
+const activeHref = ref(props.navOptions[0].href);
 
 function setActive(href) {
   activeHref.value = href;

@@ -1,9 +1,12 @@
 <script setup>
-const sublineData = {
-  roles: ["Front End UI Developer", "Web Accessibility Lead"],
-  location: "Leeds, UK",
-  image: { url: "images/uk.png", alt: "UK flag" },
-};
+import { defineProps } from "vue";
+
+const props = defineProps({
+  sublineData: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <template>

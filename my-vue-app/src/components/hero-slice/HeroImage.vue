@@ -1,8 +1,12 @@
 <script setup>
-const heroImgData = {
-  url: "images/me.png",
-  alt: "Photograph of Willis. He has short brown hair, glasses, and short facial hair. He is smiling while wearing a beige T-shirt and looking straight on at the camera.",
-};
+import { defineProps } from "vue";
+
+const props = defineProps({
+  heroImgData: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <template>

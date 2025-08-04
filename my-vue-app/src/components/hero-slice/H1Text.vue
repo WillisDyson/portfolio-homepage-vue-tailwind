@@ -1,8 +1,12 @@
 <script setup>
-const h1textData = {
-  name: "Willis Dyson",
-  image: { url: "images/wave.png", alt: "Waving hand" },
-};
+import { defineProps } from "vue";
+
+const props = defineProps({
+  h1textData: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <template>

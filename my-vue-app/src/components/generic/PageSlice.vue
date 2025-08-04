@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <section :class="['py-[100px]', background]">
+  <section :class="['py-[100px] align-center', background]">
     <slot />
   </section>
 </template>
