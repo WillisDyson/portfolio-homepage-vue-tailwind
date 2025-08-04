@@ -9,6 +9,7 @@ import SliceHeader from "./components/generic/SliceHeader.vue";
 import FlexRowWrapper from "./components/generic/FlexRowWrapper.vue";
 import FlexColWrapper from "./components/generic/FlexColWrapper.vue";
 import SkillCard from "./components/skills/SkillCard.vue";
+import Certification from "./components/certifications/Certification.vue";
 
 const navOptions = [
   { text: "About", href: "#about" },
@@ -94,6 +95,65 @@ const skillListAccessibilityData = [
   { skill: "W3C WCAG Fluency" },
   { skill: "Accessible Development & Design" },
 ];
+
+const certificationData = [
+  {
+    url: "https://www.coursera.org/account/accomplishments/verify/10AO0SLYYNZD",
+    title: "Introduction to Vue.js framework",
+    issuer: "Codio",
+    completed: "July 2025",
+    logoUrl: "images/codeo.jpg",
+  },
+  {
+    url: "https://www.coursera.org/account/accomplishments/verify/OBJXXKUK73GY",
+    title: "Learn Tailwind CSS",
+    issuer: "Scrimba",
+    completed: "July 2025",
+    logoUrl: "images/scrimba.png",
+  },
+  {
+    url: "https://www.coursera.org/account/accomplishments/verify/9HKUP9XT5HGW",
+    title: "Advanced React",
+    issuer: "Meta",
+    completed: "April 2024",
+    logoUrl: "images/logo-Meta.png",
+  },
+  {
+    url: "https://www.coursera.org/account/accomplishments/verify/F5ERDPRB6SEY",
+    title: "React Basics",
+    issuer: "Meta",
+    completed: "January 2024",
+    logoUrl: "images/logo-Meta.png",
+  },
+  {
+    url: "https://www.coursera.org/account/accomplishments/verify/GN4LFM5RTS4C",
+    title: "Programming with JavaScript",
+    issuer: "Meta",
+    completed: "November 2023",
+    logoUrl: "images/logo-Meta.png",
+  },
+  {
+    url: "https://courses.edx.org/certificates/1921f1cc711447a3aeed6edf61508c12",
+    title: "Introduction to Web Accessibility",
+    issuer: "W3C",
+    completed: "September 2023",
+    logoUrl: "images/w3c-white.png",
+  },
+  {
+    url: "https://www.credly.com/badges/802c6142-fd3a-41a2-84dd-8196f056d8a7/public_url",
+    title: "AgilePM® Foundation",
+    issuer: "APMG",
+    completed: "October 2022",
+    logoUrl: "images/apmg-white.png",
+  },
+  {
+    url: "https://www.coursera.org/account/accomplishments/verify/8D5L6K7CWHL4",
+    title: "Foundations of User Experience (UX) Design",
+    issuer: "Google",
+    completed: "August 2021",
+    logoUrl: "images/google.png",
+  },
+];
 </script>
 
 <template>
@@ -123,5 +183,11 @@ const skillListAccessibilityData = [
         "
       />
     </FlexRowWrapper>
+  </PageSlice>
+  <PageSlice background="bg-custom-very-dark-grey">
+    <SliceHeader text="Certifications" />
+    <FlexColWrapper>
+      <Certification :certificationData="certificationData" />
+    </FlexColWrapper>
   </PageSlice>
 </template>
