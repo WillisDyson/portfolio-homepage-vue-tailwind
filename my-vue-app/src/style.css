@@ -27,4 +27,33 @@ img {
     padding-right: 25px;
     text-align: center;
   }
+
+  .custom-tag {
+    @apply mr-[8px] rounded-full bg-black px-[10px] pb-[2px] pt-[1.5px] text-[0.75rem] font-normal;
+  }
+
+  .tag-vuejs {
+    @apply bg-[#00874b];
+  }
+  .tag-tailwind {
+    @apply bg-[#007b8e];
+  }
+  .tag-api {
+    @apply bg-[#b31313];
+  }
+  .tag-in-progress {
+    @apply bg-[#747474];
+  }
+  .tag-ux-design {
+    @apply bg-[#c72d59];
+  }
+  .tag-react {
+    @apply bg-[#843ae8];
+  }
+  .tag-vanilla-js {
+    @apply bg-[#c94a00];
+  }
+  .tag-accessibility {
+    @apply bg-[#00486a];
+  }
 }

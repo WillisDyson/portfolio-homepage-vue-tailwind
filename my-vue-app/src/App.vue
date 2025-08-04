@@ -11,6 +11,12 @@ import FlexColWrapper from "./components/generic/FlexColWrapper.vue";
 import SkillCard from "./components/skills/SkillCard.vue";
 import Certification from "./components/certifications/Certification.vue";
 import CareerItem from "./components/career/CareerItem.vue";
+import ProjectItem from "./components/projects/ProjectItem.vue";
+
+const skillsId = "skills";
+const certifsId = "certifs";
+const careerId = "career";
+const workId = "work";
 
 const navOptions = [
   { text: "About", href: "#about" },
@@ -193,6 +199,37 @@ const careerData = [
     dates: "Jul 2019 – Sep 2020",
   },
 ];
+
+const projectData = [
+  {
+    name: "Vue.js and Tailwind URL Shortener practice app",
+    tags: ["Vue.js", "Tailwind", "API", "In progress"],
+    tagsClass: ["tag-vuejs", "tag-tailwind", "tag-api", "tag-in-progress"],
+    backgroundImage: "bg-[url(images/vuetw.png)]",
+    pageUrl: "https://willisdyson.dev/vuetw-proj",
+  },
+  {
+    name: "Rolling Block – Accessibility services React app",
+    tags: ["UX Design", "React", "API", "In progress"],
+    tagsClass: ["tag-ux-design", "tag-react", "tag-api", "tag-in-progress"],
+    backgroundImage: "bg-[url(images/rb-tile.png)]",
+    pageUrl: "https://willisdyson.dev/rolling-block",
+  },
+  {
+    name: "Brand Pages Redesign – TopCashback",
+    tags: ["Vanilla JS", "UX Design", "Accessibility"],
+    tagsClass: ["tag-vanilla-js", "tag-ux-design", "tag-accessibility"],
+    backgroundImage: "bg-[url(images/merch-pages.png)]",
+    pageUrl: "https://willisdyson.dev/brand-page-redesign",
+  },
+  {
+    name: "Sitewide Navigation Redesign – TopCashback",
+    tags: ["Vanilla JS", "UX Design"],
+    tagsClass: ["tag-vanilla-js", "tag-ux-design"],
+    backgroundImage: "bg-[url(images/new-nav.png)]",
+    pageUrl: "https://willisdyson.dev/nav-redesign",
+  },
+];
 </script>
 
 <template>
@@ -203,8 +240,8 @@ const careerData = [
     <HeroSubline :sublineData="sublineData" />
     <SeeMoreLink :href="seeMoreHref" />
   </PageSlice>
-  <PageSlice background="bg-custom-striped">
-    <SliceHeader text="Skills" id="skills" />
+  <PageSlice background="bg-custom-striped" :id="skillsId">
+    <SliceHeader text="Skills" />
     <FlexRowWrapper>
       <SkillCard
         v-for="(card, idx) in skillCardData"
@@ -223,19 +260,29 @@ const careerData = [
       />
     </FlexRowWrapper>
   </PageSlice>
-  <PageSlice background="bg-custom-very-dark-grey">
+  <PageSlice background="bg-custom-very-dark-grey" :id="certifsId">
     <SliceHeader text="Certifications" />
     <FlexColWrapper>
       <Certification :certificationData="certificationData" />
     </FlexColWrapper>
   </PageSlice>
-  <PageSlice>
+  <PageSlice :id="careerId">
     <SliceHeader text="Career & Education" />
     <FlexRowWrapper class="max-w-[940px] flex-wrap">
       <CareerItem
         v-for="(item, index) in careerData"
         :key="index"
         :careerData="item"
+      />
+    </FlexRowWrapper>
+  </PageSlice>
+  <PageSlice background="bg-custom-very-dark-grey" :id="workId">
+    <SliceHeader text="Projects" />
+    <FlexRowWrapper class="m-[-25px] max-w-[940px] flex-wrap">
+      <ProjectItem
+        v-for="(project, index) in projectData"
+        :key="index"
+        :projectData="project"
       />
     </FlexRowWrapper>
   </PageSlice>
